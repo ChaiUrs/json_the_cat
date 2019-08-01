@@ -15,10 +15,11 @@ describe('fetchBreedDescription', () => {
 
   it('returns error message when invalid/non-existent breed is passed', (done) => {
     fetchBreedDescription('ShortCat', (err, desc) => {
-      assert.equal(err, "Failed to find breed ShortCat");
+      assert.equal(err, "ShortCat Not Found");
       const expectedDesc = null;
       assert.equal(expectedDesc, desc);
       done();
     });
   });
 });
+
